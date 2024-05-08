@@ -1,0 +1,777 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/143f4c7aad.js" crossorigin="anonymous"></script>
+
+    <!-- animate on scroll libary -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!-- font used in this page imported from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', /* class/media, here we use class to enable manually dark mode */
+        }
+    </script>
+    <script>
+        /**
+         * Loads the theme stored
+        */
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+
+<body class="dark:text-white dark:bg-neutral-900">
+    <header
+        class=" md:px-20 fixed   bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 w-12/12 inset-x-0 top-0 z-30  ">
+
+        <nav class="flex items-center justify-between p-4" aria-label="Global">
+
+            <div class="mx flex flex-row items-center md:gap-5">
+                <img src="img/logo-blue.svg" class="" alt="">
+                <h4 class="font-bold text-blue-500 hidden sm:block dark:text-zinc-200 text-2xl">Luminaria Careers</h4>
+            </div>
+            <ul class="hidden flex flex-row lg:flex gap-12">
+                <li><a class="relative text-lg focus:text-white  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Home </a></li>
+                <li><a class="relative text-lg  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Find Jobs </a></li>
+                <li><a class="relative text-lg  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Post Jobs</a></li>
+                <li><a class="relative text-lg  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Apply</a></li>
+                <li><a class="relative text-lg  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">About</a></li>
+
+
+            </ul>
+
+            <div class="flex flex-row items-center gap-5">
+                <button
+                    class="px-4 py-2 hidden sm:block border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Sign
+                    Up</button>
+                <button
+                    class="px-4 py-2 hidden sm:block border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Login</button>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- mobile section -->
+            <button
+                class="px-3 outline-none border-blue-900 dark:border-white mobile-menu-button text-blue-900 dark:text-white rounded-md p-2 border md:hidden flex border-blue-100 hover:bg-none hover:text-blue-900">
+                <i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <div class="hidden mobile-menu ">
+            <ul class="mx-auto pl-10  flex flex-col gap-2">
+
+                <li><a class="relative text-lg focus:text-white  w-fit block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Home</a></li>
+                <li><a class="relative text-lg  w-fit focus:text-white  block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Find Jobs</a></li>
+                <li><a class="relative text-lg  w-fit focus:text-white  block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Post Jobs</a></li>
+                <li><a class="relative text-lg  w-fit focus:text-white  block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">Apply</a></li>
+                <li><a class="relative text-lg  w-fit focus:text-white  block hover:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                        href="">About</a></li>
+            </ul>
+            <div class="nav-3 pl-8 p-4">
+                <ul class="flex flex-row gap-5">
+                    <a class="" type="a">
+                        Get CRONOS
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </ul>
+
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </header>
+    <main class=" pt-24  md:pt-28 gap-10 items-center  ">
+        <section class="hero flex flex-col  lg:flex-row gap-20 lg:items-center py-10 md:justify-between px-5 lg:px-10 ">
+
+            <div class="hero-1 flex flex-col gap-2 mx-5 md:mx-10 lg:w-6/12">
+                <h4 class="text-2xl md:text-6xl text-neutral-800 dark:text-zinc-200 font-light" data-aos="zoom-in-up">
+                    Find and Apply for a Job that suits you!
+                </h4>
+
+                <div class="py-5 flex flex-col  gap-10" data-aos="fade-right">
+                    <p class="text-md text-justify text-slate-500 dark:text-zinc-300 md:w-10/12">Here you can find your
+                        best job, Explore hundreds of jobs with us. Ready for your next adventure?
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-5" data-aos="zoom-in-up">
+                        <a class=" rounded-lg p-3 md:w-4/12 text-center border-blue-500 border-2  hover:border-blue hover:border-2 cursor-pointer hover:bg-white hover:text-black hover:bg-zinic-600 bg-blue-500 text-white "
+                            href="">Documentation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <a class=" rounded-lg p-3 md:w-4/12 gap-2 text-center border-blue-500 border-2  hover:border-blue hover:border-2 cursor-pointer hover:bg-white hover:text-black hover:bg-zinic-600 bg-blue-500 text-white "
+                            href=""><i class="fa fa-github" aria-hidden="true"></i> Get Started</a>
+                    </div>
+                    <p class="text-md text-justify text-slate-500 dark:text-zinc-200 md:w-10/12">Most Searched Jobs:</p>
+                    <div class="grid grid-rows-2 grid-cols-3 lg:grid-cols-4 gap-5" data-aos="zoom-in-up">
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Graphic Designer</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Front End Developer</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Data Analyst</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Accountant</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Photographer</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Full Stack Developer</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">Senior Lecturer</p>
+                        <p class="p-2 bg-slate-100 dark:text-zinc-800 text-sm">UX Designer</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="hero-2  lg:w-6/12" data-aos="zoom-in-up">
+                <img src="img/hero-1.svg" alt="" class="md:w-12/12 ">
+            </div>
+        </section>
+        <section
+            class="pt-10 px-5 py-5  flex flex-col lg:flex-row gap-5  justify-between md:px-10 bg-sky-200 dark:bg-sky-500">
+            <img src="img/hero-2.svg" class="lg:w-6/12" alt="" data-aos="zoom-in-up">
+            <div class="flex flex-col gap-2 lg:gap-5 lg:w-4/12" data-aos="fade-right">
+                <h4 class="font-semibold text-md lg:text-lg ">What we offer:</h4>
+                <h4 class="font-semibold text-md lg:text-lg ">Solutions that will take your recruitment
+                    to the next level!</h4>
+                <p class="text-md font-light">We build effective strategies that will help you reach
+                    employers worldwide.</p>
+                <img src="img/hero-3.svg" alt="">
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-10 py-10 align-center px-5 lg:px-10">
+            <h4 class="text-lg lg:text-2xl font-bold text-center">Only 3 Steps to Get Your Dream Job!</h4>
+            <div class="flex flex-col lg:flex-row justify-evenly items-center gap-10">
+                <div class="flex flex-col bg-blue-500 md:w-6/12 text-white rounded-lg p-4 ">
+                    <h4 class="text-2xl font-bold">1</h4>
+                    <div class="flex items-center gap-4 flex-col">
+                        <i class="fa fa-user text-4xl" aria-hidden="true"></i>
+                        <p>Register for an account</p>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-blue-500 md:w-6/12 text-white rounded-lg p-4 ">
+                    <h4 class="text-2xl font-bold">1</h4>
+                    <div class="flex items-center gap-4 flex-col">
+                        <i class="fa-regular fa-file-lines text-4xl" aria-hidden="true"></i>
+                        <p>Register for an account</p>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-blue-500 md:w-6/12 text-white rounded-lg p-4 ">
+                    <h4 class="text-2xl font-bold">1</h4>
+                    <div class="flex items-center gap-4 flex-col">
+                        <i class="fa-solid fa-paper-plane text-4xl" aria-hidden="true"></i>
+                        <p>Register for an account</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-10 py-10 align-center px-5 lg:px-10">
+            <div class="text-center">
+                <h4 class="text-lg lg:text-2xl font-bold">Browse By Category</h4>
+                <p class="text-md font-light">You can locate the category in which your dream job can be found! </p>
+            </div>
+
+            <div class="grid lg:grid-cols-4 grid-cols-2 gap-5 lg:gap-20 lg:grid-rows-2">
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-house-chimney text-4xl" aria-hidden="true"></i>
+                        <p>Real Estate Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">70 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-hospital text-4xl"></i>
+                        <p>Hospital Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">50 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-helmet-safety text-4xl"></i>
+                        <p>Construction Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">45 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-arrow-trend-up text-4xl"></i>
+                        <p>Accounting Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">23 Jobs Available</a>
+                    </div>
+
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-lightbulb text-4xl"></i>
+                        <p>Design & Creative Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">70 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-shirt text-4xl"></i>
+                        <p>Fashion</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">50 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-desktop text-4xl"></i>
+                        <p>IT & Telecom Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">45 Jobs Available</a>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-gray-100 dark:text-black hover:shadow-[0_10px_20px_rgba(0,_46,_240,_0.1)] rounded-lg p-2 lg:p-4 ">
+                    <div class="flex items-center text-center gap-4 flex-col">
+                        <i class="fa-solid fa-truck text-4xl"></i>
+                        <p>Shipping Jobs</p>
+                        <a class="relative text-sm focus:text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+                            href="">23 Jobs Available</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-10 py-10 items-center px-5 lg:px-10">
+            <div class="text-center">
+                <h4 class="text-lg lg:text-2xl font-bold">Featured Jobs</h4>
+                <p class="text-md font-light">Freshly released job applications</p>
+            </div>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 lg:gap-20 lg:grid-rows-2">
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4  rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">Content Manager</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">On Site</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4  rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">CFO</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">On Site</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4  rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">Product Manager</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">On Site</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4  rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">UX Designer</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">On Site</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4  rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">Creative Director</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">Remote</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+                <div class="flex cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 flex-col gap-5 border-blue-500 dark:border-blue-200 border border-2 p-4 h-full rounded-lg">
+                    <div class="flex flex-row gap-5 justify-between items-center">
+                        <div class="flex flex-row gap-5">
+<svg class="w-14 h-14 text-gray-800 p-2 bg-pink-500 rounded-lg text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col">
+                            <h4 class="font-bold">Dribble</h4>
+                            <p class="font-light text-sm">Maryland, Usa</p>
+                            <p class="font-light text-sm">Posted 5 days ago</p>
+                        </div>
+                        </div>
+                        
+                        <svg class="w-8
+                        h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z" />
+                        </svg>
+
+                    </div>
+                    <h4 class="font-bold">Artificial Intelligence Expert</h4>
+                    <div class="flex gap-5 dark:text-black flex-row">
+                        <p class="p-2 bg-gray-100 text-sm">Full Time</p>
+                        <p class="p-2 bg-gray-100 text-sm">Technology</p>
+                        <p class="p-2 bg-gray-100 text-sm">On Site</p>
+                    </div>
+                    <p class="text-sm font-light ">Dribbble is seeking for the services of a professional
+                        Content Manager who has 5 Years working experience
+                        in this field. He/She will be working closely with............</p>
+                    <div class="flex flex-row gap-10">
+                        <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Apply</button>
+                    <button
+                        class="px-4 py-2 w-6/12 border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Read More</button>
+                    </div>
+
+                </div>
+            </div>
+            <button
+                        class="px-4 py-2 w-6/12 lg:w-4/12 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Find More Jobs <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        </section>
+
+        <section class="flex flex-col gap-10 py-10 items-center px-5 lg:px-10">
+                <h4 class="text-lg lg:text-2xl text-center font-bold">We are trusted by the World’s largest companies</h4>
+                <div class="grid lg:grid-cols-5 md:grid-cols-4  gap-10 lg:gap-20 grid-cols-2 lg:grid-rows-2">
+                    <img src="img/yahoo.svg" alt="">
+                    <img src="img/microsoft.svg" alt="">
+                    <img src="img/youtube.svg" alt="">
+                    <img src="img/lenovo.svg" alt="">
+                    <img src="img/samsung.svg" alt="">
+
+                </div>
+            </section>
+
+            <section class="flex flex-col bg-blue-500 md:mx-20 lg:mx-40 gap-5 p-10 md:p-20 items-center">
+                <h4 class="font-bold text-white text-1xl">Want to get notified on 
+                    every Job Posting?</h4>
+                    <div class="flex flex-col md:flex-row">
+                        <input type="email" class="px-10 py-5" name="" id="" placeholder="Enter Your Email Address">
+                        <button
+                        class="px-4 py-2   border-1 cursor-pointer bg-black text-white hover:bg-white hover:text-black">Find More Jobs <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      
+                    </div>
+            </section>
+    </main>
+
+
+
+
+    <footer class="pt-10">
+        <div class=" hidden md:block">
+            <div class=" flex flex-col">
+
+                        <div class="flex flex-col gap-3 md:w-8/12">
+                            <img src="/img/footer-21.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-neutral-100 dark:bg-neutral-800 dark:text-white px-10">
+                        <div class="flex flex-col gap-20 items-center lg:flex-row md:flex-col ">
+                            <div class="flex flex-col gap-5 p-10 lg:w-4/12">
+                                <div class="flex flex-row gap-5 py-2 text-1xl">
+                                    <button
+                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                        href=""><i class="fa text-indigo-500 fa-twitter"
+                                            aria-hidden="true"></i></button>
+                                    <button
+                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                        href=""><i class="fa text-indigo-500 fa-facebook"
+                                            aria-hidden="true"></i></button>
+                                    <button
+                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                        href=""><i class="fa text-indigo-500 fa-instagram"
+                                            aria-hidden="true"></i></button>
+                                    <button
+                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                        href=""><i class="fa text-indigo-500 fa-linkedin"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                                <div class="flex flex-row gap-3 ">
+                                    <input type="email" name="" placeholder="Enter your email address"
+                                        class="p-4  rounded-full " id="" />
+                                    <button
+                                        class="p-4 bg-indigo-500 p-3 rounded-full text-white hover:text-indigo-500 hover:bg-white cursor-pointer border-indigo-500 border-2 "
+                                        href="">Subscribe</button>
+                                </div>
+                                <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our latest hub tips,
+                                    exclusive offers,
+                                    and exciting product launches.</p>
+
+                            </div>
+                            <div class="flex flex-row gap-20  md:grid-rows-1">
+                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                                    <h4 class="font-bold text-indigo-500 text-md">About Us</h4>
+                                    <li><button> Contact Us </button></li>
+                                    <li><button>Blog</button></li>
+                                    <li><button>Awards & Recognition</button></li>
+                                    <li><button> Customer Stories</button></li>
+                                </ul>
+                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                                    <h4 class="font-bold text-indigo-500 text-md">Customer Service</h4>
+                                    <li><button> Contact Us</button></li>
+                                    <li><button>FAQs</button></li>
+                                    <li><button> Customer Stories</button></li>
+                                    <li><button> Features</button></li>
+                                    <li><button> About Us</button></li>
+                                </ul>
+                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                                    <h4 class="font-bold text-indigo-500 text-md">Accessibility</h4>
+                                    <li><button>Pricing</button></li>
+                                    <li><button> Careers</button></li>
+                                    <li><button>Advertise with Us</button></li>
+                                    <li><button>Brand Assets</button></li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between border-t-2 py-5 gap-2 md:gap-10">
+                            <h4>Luminaria Careers ©All right reserved </h4>
+                            <h4>2024 Terms and condition</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <footer class="footer sm:hidden ">
+        <div class="p-5 md:p-10 bg-neutral-100 dark:bg-neutral-800 dark:text-white">
+            <div class="flex flex-col gap-2 md:flex-row sm:justify-between">
+                <div class="flex flex-col gap-5 py-5 sm:gap-10">
+                    <div class="flex flex-col gap-5 md:w-6/12">
+                        <div class="flex flex-col gap-5 md:w-4/12">
+                            <div class="flex flex-row gap-5 py-2 text-1xl">
+                                <button
+                                    class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                    href=""><i class="fa text-indigo-500 fa-twitter"
+                                        aria-hidden="true"></i></button>
+                                <button
+                                    class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                    href=""><i class="fa text-indigo-500 fa-facebook"
+                                        aria-hidden="true"></i></button>
+                                <button
+                                    class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                    href=""><i class="fa text-indigo-500 fa-instagram"
+                                        aria-hidden="true"></i></button>
+                                <button
+                                    class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                    href=""><i class="fa text-indigo-500 fa-linkedin"
+                                        aria-hidden="true"></i></button>
+                            </div>
+                            <div class="flex flex-col  justify-between gap-3 ">
+                                <input type="email" name="" placeholder="Enter your email address"
+                                    class="p-4  rounded-full " id="" />
+                                <button
+                                    class="p-4  bg-indigo-500 p-3 rounded-full text-white hover:text-indigo-500 hover:bg-white cursor-pointer border-indigo-500 border-2 "
+                                    href="">Subscribe</button>
+                            </div>
+                            <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our latest hub tips,
+                                exclusive offers,
+                                and exciting product launches.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 grid-rows-2 gap-10 md:grid-cols-5 md:grid-rows-1 sm:gap-20">
+                    <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
+                        <h4 class="font-bold text-indigo-500 text-md">About Us</h4>
+                        <li><button> Contact Us </button></li>
+                        <li><button>Blog</button></li>
+                        <li><button>Awards</button></li>
+                    </ul>
+                    <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
+                        <h4 class="font-bold text-indigo-500 text-md">Customer Service</h4>
+                        <li><button> Contact Us</button></li>
+                        <li><button>FAQs</button></li>
+                        <li><button> Features</button></li>
+                        <li><button> About Us</button></li>
+                    </ul>
+                    <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
+                        <h4 class="font-bold text-indigo-500 text-md">Accessibility</h4>
+                        <li><button>Pricing</button></li>
+                        <li><button> Careers</button></li>
+
+                        <li><button>Brand Assets</button></li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between border-t-2 py-5 gap-2 md:gap-10">
+                <h4>Luminaria Careers © 2000-2023, All Rights Reserved</h4>
+
+                <img src="/img/footer-2.svg" alt="" />
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+
+<script>
+
+    // Grab HTML Elements
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    // Add Event Listeners
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+    //to start using the libary
+    AOS.init(
+    );
+
+    var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+    var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+
+    // Change the icons inside the button based on previous settings
+    if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+        themeToggleLightIcon.classList.remove("hidden");
+    } else {
+        themeToggleDarkIcon.classList.remove("hidden");
+    }
+
+    var themeToggleBtn = document.getElementById("theme-toggle");
+
+    themeToggleBtn.addEventListener("click", function () {
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle("hidden");
+        themeToggleLightIcon.classList.toggle("hidden");
+
+        // if set via local storage previously
+        if (localStorage.getItem("color-theme")) {
+            if (localStorage.getItem("color-theme") === "light") {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("color-theme", "dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("color-theme", "light");
+            }
+
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains("dark")) {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("color-theme", "light");
+            } else {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("color-theme", "dark");
+            }
+        }
+    });
+</script>
+
+</html>
