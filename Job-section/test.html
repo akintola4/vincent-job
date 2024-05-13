@@ -18,7 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
     <script>
         tailwind.config = {
@@ -45,7 +45,12 @@
         <nav class="flex items-center justify-between p-4" aria-label="Global">
 
             <div class="mx flex flex-row items-center md:gap-5">
-                <img src="img/logo-blue.svg" class="" alt="">
+                <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.5 0C8.76316 0 0 8.53847 0 19C0 29.4616 8.76316 38 19.5 38C30.2368 38 39 29.4616 39 19C39 8.53847 30.2368 0 19.5 0ZM5.44737 19C5.44737 15.0769 7.18421 11.4615 9.94737 9.00001C11.0526 8.00001 12.9474 8.30769 13.7368 9.61539L18.6316 17.8462C19.1053 18.6154 19.1053 19.5385 18.6316 20.3077L13.7368 28.5385C12.9474 29.9231 11.0526 30.1538 9.86842 29.0769C7.18421 26.4615 5.44737 22.9231 5.44737 19ZM25.2632 28.3846L20.3684 20.1539C19.8947 19.3846 19.8947 18.4615 20.3684 17.6923L25.2632 9.46153C26.0526 8.15384 27.8684 7.84615 29.0526 8.84615C31.8158 11.3077 33.5526 14.9231 33.5526 18.8462C33.5526 22.7692 31.8158 26.3846 29.0526 28.8462C27.8684 30.0769 26.0526 29.7692 25.2632 28.3846Z"
+                        fill="#0083E3" />
+                </svg>
+
                 <h4 class="font-bold text-blue-500 hidden sm:block dark:text-zinc-200 text-2xl">Luminaria Careers</h4>
             </div>
             <ul class="hidden flex flex-row lg:flex gap-12">
@@ -139,7 +144,7 @@
                     </div>
 
                     <input
-                        class=" h-full w-full rounded-[7px] bg-transparent px-3 py-2.5  text-sm text-blue-gray-700 outline outline-0"
+                        class=" h-full w-full rounded-[7px] bg-transparent px-3 py-2.5 border-none  text-sm text-blue-gray-700 outline outline-0"
                         type="text" id="search" placeholder="Search something.." />
                 </div>
                 <div
@@ -156,7 +161,7 @@
                     </div>
 
                     <select
-                        class=" h-full w-full rounded-[7px] bg-transparent px-3 py-2.5 text-sm  text-blue-gray-700 outline outline-0 ">
+                        class=" h-full w-full rounded-[7px] bg-transparent border-none px-3 py-2.5 text-sm  text-blue-gray-700 outline outline-0 ">
                         <option value="brazil">Brazil</option>
                         <option value="bucharest">Bucharest</option>
                         <option value="london">London</option>
@@ -171,7 +176,8 @@
             </div>
         </section>
 
-        <section class="flex flex-row  p-5 my-10  cursor-pointer justify-between gap-10 bg-gray-100 dark:bg-neutral-800">
+        <section
+            class="flex flex-row  p-3 lg:p-5 my-10  cursor-pointer justify-between gap-10 bg-gray-100 dark:bg-neutral-800">
             <div
                 class=" hidden lg:flex lg:w-3/12  gap-5 p-5 bg-white rounded-lg flex-col dark:bg-neutral-900 dark:border-gray-600 dark:text-white border border-gray-200">
                 <h4 class="text-1xl font-semibold">Filters</h4>
@@ -352,16 +358,20 @@
                     <div
                         class="relative flex items-center w-6/12 lg:w-5/12 h-12 border-2  bg-white overflow-hidden  text-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <div class="grid place-items-center h-full w-12 text-gray-300">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 7H21" stroke="black" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
-                                <path d="M6 12H18" stroke="black" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
-                                <path d="M10 17H14" stroke="black" stroke-width="1.6" stroke-linecap="round" class="my-path"></path>
-                                </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 7H21" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                                <path d="M6 12H18" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                                <path d="M10 17H14" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                            </svg>
 
                         </div>
 
                         <select
-                            class=" h-full w-8/12 bg-white dark:bg-gray-700 dark:text-white px-3 py-2.5 text-sm  text-black outline outline-0 ">
+                            class=" h-full w-8/12 bg-white border-none dark:bg-gray-700 dark:text-white px-3 py-2.5 text-sm  text-black outline outline-0 ">
                             <option value="brazil">Filter by</option>
                             <option value="bucharest">Bucharest</option>
                             <option value="london">London</option>
@@ -370,58 +380,281 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col  xl:items-start lg:flex-row bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-neutral-900 dark:border-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg "  class="w-20 sm:w-30 lg:w-60 xl:w-40 text-gray-500 dark:text-white"  viewBox="0 0 48 48">
-                        <path fill="#fff" fill-rule="evenodd" d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z" clip-rule="evenodd"></path><path fill="#424242" fill-rule="evenodd" d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z" clip-rule="evenodd"></path>
-                        </svg>
+                <div
+                    class="flex flex-col  xl:items-start  bg-white gap-5 rounded-lg border border-gray-100 p-3 lg:p-5 dark:bg-neutral-900 dark:border-gray-600">
+                    <div class="flex flex-row justify-between w-full">
+                        <div class="flex flex-row lg:w-8/12 gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg " class="w-20
+                            h-20 text-gray-800 dark:text-white" viewBox="0 0 48 48">
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#424242" fill-rule="evenodd"
+                                    d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <div class="flex flex-col gap-1">
+                                <p class="text-md font-medium">Notion</p>
+                                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                                    <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                                    <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">New post</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:w-4/12 flex lg:justify-end">
+                            <svg class="w-10
+                            h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z">
+                                </path>
+                            </svg>
+                        </div>
+
+
+                    </div>
+                    <div class="grid xl:grid-cols-4 grid-cols-2 xl:grid-rows-1 gap-2 xl:gap-5">
+                        <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
+                            </svg>
+                            <p class="text-sm">Brussels</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+
+                            <p class="text-sm">Full time</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2" />
+                            </svg>
+
+                            <p class="text-sm">50-55k</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z" />
+                            </svg>
+
+                            <p class="text-sm">29 min ago</p>
+                        </div>
+                    </div>
                     <div class="flex flex-col gap-2">
-                        <p class="text-md font-medium">Notion</p>
-                        <div class="flex flex-row items-center gap-2">
-                            <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
-                            <p class="bg-purple-100 p-2 text-sm text-purple-800 rounded-lg">New post</p>
-                        </div>
-                        <div class="grid xl:grid-cols-4 grid-cols-2 xl:grid-rows-1 gap-2 xl:gap-5">
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                                  </svg>
-                                <p class="text-sm">Brussels</p>                                  
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                                  </svg>
-                                  
-                                <p class="text-sm">Full time</p>                                  
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2"/>
-                                  </svg>
-                                  
-                                <p class="text-sm">50-55k</p>                                  
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/>
-                                  </svg>
-                                  
-                                <p class="text-sm">29 min ago</p>                                  
-                            </div>
-                        </div>
-                        <p class="text-sm font-light">It softens the stress that occurs during the treatment period. Or they are from football. Let
+                        <h4 class="text-1xl font-bold ">Project Overview</h4>
+                        <p class="text-sm font-light">It softens the stress that occurs during the treatment period. Or
+                            they
+                            are from football. Let
                             it be said that they are guilty of such and such a crime. The problems occurred during the
                             launch.</p>
                     </div>
-                </div>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-1xl font-bold ">Skills</h4>
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10">
+                            <p class="bg-blue-100 py-2 px-4  text-sm text-blue-800 rounded-lg">Cloud developer</p>
+                            <p class="bg-blue-100 py-2 px-4  text-sm text-blue-800 rounded-lg">Frontend</p>
+                            <p class="bg-blue-100 py-2 px-4  text-sm text-blue-800 rounded-lg">Backend</p>
+                        </div>
 
-                
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-1xl font-bold ">Detail Project</h4>
+                        <p class="text-sm font-light"> Rapidly advancing your AI expertise through specialized training
+                            and applying this knowledge
+                            to create autonomous, AI-driven platforms and tools
+                            Experimenting with state-of-the-art AI tools like GPT-4 Vision, Google Gemini, and Amazon
+                            CodeWhisperer, integrating them into our developmental process to enhance their utility
+                            Evaluating and optimizing AI solutions across various infrastructures, such as AWS</p>
+
+                        <h4 class="text-sm font-bold ">What You Won’t Be Doing</h4>
+
+                        <p class="text-sm font-light">Traditional coding - our AI does the heavy lifting, freeing you to
+                            innovate and strategize
+                            Being stuck on repetitive tasks - no two problems are the same</p>
+
+                        <h4 class="text-sm font-bold ">Junior Software Engineer Key Responsibilities
+
+                            <p class="text-sm font-light">Architecting and deploying sophisticated, fully-automated AI
+                                systems that require no human
+                                intervention for a truly scalable impact</p>
+
+                            <h4 class="text-sm font-bold ">Basic Requirements</h4>
+
+                            <p class="text-sm font-light">A passion for and basic understanding of generative AI, Large
+                                Language Models, Prompt
+                                Engineering, and the wider AI ecosystem
+                                Professional experience using AI to realize quantifiable business value
+                                Proficiency in Python</p>
+
+                            <h4 class="text-sm font-bold ">About Trilogy</h4>
+
+                            <p class="text-sm font-light">Hundreds of software businesses run on the Trilogy Business
+                                Platform. For three decades,
+                                Trilogy has been known for 3 things: Relentlessly seeking top talent, Innovating new
+                                technology, and incubating new businesses. Our technological innovation is spearheaded
+                                by a
+                                passion for simple customer-facing designs. Our incubation of new businesses ranges from
+                                entirely new moon-shot ideas to rearchitecting existing projects for today's modern
+                                cloud-based stack. Trilogy is a place where you can be surrounded with great people, be
+                                proud of doing great work, and grow your career by leaps and bounds.
+
+                                There is so much to cover for this exciting role, and space here is limited. Hit the
+                                Apply
+                                button if you found this interesting and want to learn more. We look forward to meeting
+                                you!
+                            </p>
+                            </p>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row w-full justify-between">
+                        <div class="flex flex-row lg:w-8/12 items-center bg-blue-100 dark:bg-blue-500 p-2">
+                            <p class="text-sm overflow-scroll">https://LuminariaCareers.com/job/8ffsys78</p>
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 4v3a1 1 0 0 1-1 1h-3m4 10v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2m11-3v10a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7.87a1 1 0 0 1 .24-.65l2.46-2.87a1 1 0 0 1 .76-.35H18a1 1 0 0 1 1 1Z" />
+                            </svg>
+
+                        </div>
+
+
+                        <!-- Modal toggle -->
+                        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                            class="px-4 py-2 border lg:w-3/12 border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black"
+                            type="button">
+                            Apply
+                        </button>
+
+                        <!-- Main modal -->
+                        <div id="crud-modal" tabindex="-1" aria-hidden="true"
+                            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative p-4 w-full max-w-md max-h-full">
+                                <!-- Modal content -->
+                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                    <!-- Modal header -->
+                                    <div
+                                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                            Apply For Job
+                                        </h3>
+                                        <button type="button"
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                            data-modal-toggle="crud-modal">
+                                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                            </svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <form class="p-4 md:p-5">
+                                        <div class="grid gap-4 mb-4 grid-cols-2">
+                                            <div class="col-span-2">
+                                                <label for="name"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                                                <input type="text" name="name" id="name"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                    placeholder="Full Name" required="">
+                                            </div>
+                                            <div class="col-span-2">
+                                                <label
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                                    for="small_size">Upload Your CV</label>
+                                                <input
+                                                    class="block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                                    id="small_size" type="file">
+                                            </div>
+                                            <div class="col-span-2 sm:col-span-1">
+                                                <label for="price"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expected
+                                                    Salary</label>
+                                                <input type="number" name="price" id="price"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                    placeholder="$2999" required="">
+                                            </div>
+                                            <div class="col-span-2 sm:col-span-1">
+                                                <label for="category"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job
+                                                    Type</label>
+                                                <select id="category"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                    <option selected="">Select category</option>
+                                                    <option value="TV">Remote</option>
+                                                    <option value="PC">In Office</option>
+                                                    <option value="GA">Hybrid</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-2">
+                                                <label for="description"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tell
+                                                    us why you want to work for us</label>
+                                                <textarea id="description" rows="4"
+                                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Write product description here"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row justify-between">
+                                            <button
+                                                class="px-4 py-2  border border-blue-500 border-1 cursor-pointer hover:bg-blue-500 hover:text-white"
+                                                type="button" data-modal-toggle="crud-modal">
+                                                Cancel
+
+                                            </button>
+                                            <button type="submit"
+                                                class="px-4 py-2 border lg:w-3/12 border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">
+
+                                                Submit
+                                            </button>
+                                        </div>
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
             </div>
             <div class=" hidden lg:flex lg:w-3/12 flex flex-col gap-10">
-                <div class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-neutral-900 dark:text-white rounded-lg">
+                <div
+                    class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-neutral-900 dark:text-white rounded-lg">
                     <h4 class="font-semibold text-2xl text-black dark:text-white">📨 Email me for jobs</h4>
-                    <p class="text-sm text-gray-500 dark:text-white">To be like this. Let it be with labor and pain. Or let them run
+                    <p class="text-sm text-gray-500 dark:text-white">To be like this. Let it be with labor and pain. Or
+                        let them run
                         away with the advantage of those
                         enemies.</p>
                     <input type="text" class="px-4 py-2 border border-2 border-grey-100" placeholder="name@mail.com"
@@ -430,94 +663,95 @@
                         class="px-4 py-2 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Sign
                         Up</button>
                 </div>
-                <div class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-neutral-900 dark:text-white rounded-lg">
+                <div
+                    class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-neutral-900 dark:text-white rounded-lg">
                     <h4 class="font-semibold text-2xl text-black dark:text-white">🚀 Get noticed faster</h4>
-                    <p class="text-sm text-gray-500 dark:text-white">He who thus abandons a hair of labor has a great desire to be
+                    <p class="text-sm text-gray-500 dark:text-white">He who thus abandons a hair of labor has a great
+                        desire to be
                         driven by labor.</p>
+
                     <button
                         class="px-4 py-2 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Upload
                         your resume</button>
                 </div>
             </div>
-        </section>
+            </div>
+
     </main>
+
     <footer class="pt-10">
         <div class=" hidden md:block">
             <div class=" flex flex-col">
 
-                        <div class="flex flex-col gap-3 md:w-8/12">
-                            <img src="/img/footer-21.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="bg-neutral-100 dark:bg-neutral-800 dark:text-white px-10">
-                        <div class="flex flex-col gap-20 items-center lg:flex-row md:flex-col ">
-                            <div class="flex flex-col gap-5 p-10 lg:w-4/12">
-                                <div class="flex flex-row gap-5 py-2 text-1xl">
-                                    <button
-                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                        href=""><i class="fa text-indigo-500 fa-twitter"
-                                            aria-hidden="true"></i></button>
-                                    <button
-                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                        href=""><i class="fa text-indigo-500 fa-facebook"
-                                            aria-hidden="true"></i></button>
-                                    <button
-                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                        href=""><i class="fa text-indigo-500 fa-instagram"
-                                            aria-hidden="true"></i></button>
-                                    <button
-                                        class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                        href=""><i class="fa text-indigo-500 fa-linkedin"
-                                            aria-hidden="true"></i></button>
-                                </div>
-                                <div class="flex flex-row gap-3 ">
-                                    <input type="email" name="" placeholder="Enter your email address"
-                                        class="p-4  rounded-full " id="" />
-                                    <button
-                                        class="p-4 bg-indigo-500 p-3 rounded-full text-white hover:text-indigo-500 hover:bg-white cursor-pointer border-indigo-500 border-2 "
-                                        href="">Subscribe</button>
-                                </div>
-                                <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our latest hub tips,
-                                    exclusive offers,
-                                    and exciting product launches.</p>
-
-                            </div>
-                            <div class="flex flex-row gap-20  md:grid-rows-1">
-                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
-                                    <h4 class="font-bold text-indigo-500 text-md">About Us</h4>
-                                    <li><button> Contact Us </button></li>
-                                    <li><button>Blog</button></li>
-                                    <li><button>Awards & Recognition</button></li>
-                                    <li><button> Customer Stories</button></li>
-                                </ul>
-                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
-                                    <h4 class="font-bold text-indigo-500 text-md">Customer Service</h4>
-                                    <li><button> Contact Us</button></li>
-                                    <li><button>FAQs</button></li>
-                                    <li><button> Customer Stories</button></li>
-                                    <li><button> Features</button></li>
-                                    <li><button> About Us</button></li>
-                                </ul>
-                                <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
-                                    <h4 class="font-bold text-indigo-500 text-md">Accessibility</h4>
-                                    <li><button>Pricing</button></li>
-                                    <li><button> Careers</button></li>
-                                    <li><button>Advertise with Us</button></li>
-                                    <li><button>Brand Assets</button></li>
-                                    
-                                </ul>
-                                
-                            </div>
-                        </div>
-
-                        <div
-                            class="flex flex-col md:flex-row items-center justify-between border-t-2 py-5 gap-2 md:gap-10">
-                            <h4>Luminaria Careers ©All right reserved </h4>
-                            <h4>2024 Terms and condition</h4>
-                        </div>
-                    </div>
+                <div class="flex flex-col gap-3 md:w-8/12">
+                    <img src="/img/footer-21.svg" alt="">
                 </div>
             </div>
+            <div class="bg-neutral-100 dark:bg-neutral-800 dark:text-white px-10">
+                <div class="flex flex-col gap-20 items-center lg:flex-row md:flex-col ">
+                    <div class="flex flex-col gap-5 p-10 lg:w-4/12">
+                        <div class="flex flex-row gap-5 py-2 text-1xl">
+                            <button
+                                class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                href=""><i class="fa text-blue-500 fa-twitter" aria-hidden="true"></i></button>
+                            <button
+                                class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                href=""><i class="fa text-blue-500 fa-facebook" aria-hidden="true"></i></button>
+                            <button
+                                class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                href=""><i class="fa text-blue-500 fa-instagram" aria-hidden="true"></i></button>
+                            <button
+                                class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
+                                href=""><i class="fa text-blue-500 fa-linkedin" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="flex flex-row gap-3 ">
+                            <input type="email" name="" placeholder="Enter your email address"
+                                class="p-4  rounded-full " id="" />
+                            <button
+                                class="p-4 bg-blue-500 p-3 rounded-full text-white hover:text-blue-500 hover:bg-white cursor-pointer border-blue-500 border-2 "
+                                href="">Subscribe</button>
+                        </div>
+                        <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our latest
+                            hub tips,
+                            exclusive offers,
+                            and exciting product launches.</p>
+
+                    </div>
+                    <div class="flex flex-row gap-20  md:grid-rows-1">
+                        <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                            <h4 class="font-bold text-blue-500 text-md">About Us</h4>
+                            <li><button> Contact Us </button></li>
+                            <li><button>Blog</button></li>
+                            <li><button>Awards & Recognition</button></li>
+                            <li><button> Customer Stories</button></li>
+                        </ul>
+                        <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                            <h4 class="font-bold text-blue-500 text-md">Customer Service</h4>
+                            <li><button> Contact Us</button></li>
+                            <li><button>FAQs</button></li>
+                            <li><button> Customer Stories</button></li>
+                            <li><button> Features</button></li>
+                            <li><button> About Us</button></li>
+                        </ul>
+                        <ul class="flex flex-col gap-2 dark:text-white text-zinc-600 text-left">
+                            <h4 class="font-bold text-blue-500 text-md">Accessibility</h4>
+                            <li><button>Pricing</button></li>
+                            <li><button> Careers</button></li>
+                            <li><button>Advertise with Us</button></li>
+                            <li><button>Brand Assets</button></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between border-t-2 py-5 gap-2 md:gap-10">
+                    <h4>Luminaria Careers ©All right reserved </h4>
+                    <h4>2024 Terms and condition</h4>
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
         </div>
     </footer>
@@ -530,29 +764,26 @@
                             <div class="flex flex-row gap-5 py-2 text-1xl">
                                 <button
                                     class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                    href=""><i class="fa text-indigo-500 fa-twitter"
-                                        aria-hidden="true"></i></button>
+                                    href=""><i class="fa text-blue-500 fa-twitter" aria-hidden="true"></i></button>
                                 <button
                                     class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                    href=""><i class="fa text-indigo-500 fa-facebook"
-                                        aria-hidden="true"></i></button>
+                                    href=""><i class="fa text-blue-500 fa-facebook" aria-hidden="true"></i></button>
                                 <button
                                     class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                    href=""><i class="fa text-indigo-500 fa-instagram"
-                                        aria-hidden="true"></i></button>
+                                    href=""><i class="fa text-blue-500 fa-instagram" aria-hidden="true"></i></button>
                                 <button
                                     class="p-2 text-center text-black bg-white border-2 rounded-full cursor-pointer border-zinc-20 hover:border-black hover:border-2 hover:bg-black hover:text-white"
-                                    href=""><i class="fa text-indigo-500 fa-linkedin"
-                                        aria-hidden="true"></i></button>
+                                    href=""><i class="fa text-blue-500 fa-linkedin" aria-hidden="true"></i></button>
                             </div>
                             <div class="flex flex-col  justify-between gap-3 ">
                                 <input type="email" name="" placeholder="Enter your email address"
                                     class="p-4  rounded-full " id="" />
                                 <button
-                                    class="p-4  bg-indigo-500 p-3 rounded-full text-white hover:text-indigo-500 hover:bg-white cursor-pointer border-indigo-500 border-2 "
+                                    class="p-4  bg-blue-500 p-3 rounded-full text-white hover:text-blue-500 hover:bg-white cursor-pointer border-blue-500 border-2 "
                                     href="">Subscribe</button>
                             </div>
-                            <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our latest hub tips,
+                            <p class="text-sm text-zinc-600 dark:text-white">Subscribe to stay in the loop with our
+                                latest hub tips,
                                 exclusive offers,
                                 and exciting product launches.</p>
 
@@ -561,25 +792,25 @@
                 </div>
                 <div class="grid grid-cols-2 grid-rows-2 gap-10 md:grid-cols-5 md:grid-rows-1 sm:gap-20">
                     <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
-                        <h4 class="font-bold text-indigo-500 text-md">About Us</h4>
+                        <h4 class="font-bold text-blue-500 text-md">About Us</h4>
                         <li><button> Contact Us </button></li>
                         <li><button>Blog</button></li>
                         <li><button>Awards</button></li>
                     </ul>
                     <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
-                        <h4 class="font-bold text-indigo-500 text-md">Customer Service</h4>
+                        <h4 class="font-bold text-blue-500 text-md">Customer Service</h4>
                         <li><button> Contact Us</button></li>
                         <li><button>FAQs</button></li>
                         <li><button> Features</button></li>
                         <li><button> About Us</button></li>
                     </ul>
                     <ul class="flex flex-col gap-2 text-left dark:text-white text-zinc-600 text-left">
-                        <h4 class="font-bold text-indigo-500 text-md">Accessibility</h4>
+                        <h4 class="font-bold text-blue-500 text-md">Accessibility</h4>
                         <li><button>Pricing</button></li>
                         <li><button> Careers</button></li>
 
                         <li><button>Brand Assets</button></li>
-                        
+
                     </ul>
 
                 </div>
@@ -593,9 +824,10 @@
         </div>
 
     </footer>
-</body>
-<script>
 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script>
     // Grab HTML Elements
     const btn = document.querySelector("button.mobile-menu-button");
     const menu = document.querySelector(".mobile-menu");
