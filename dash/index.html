@@ -19,7 +19,6 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-
     <script>
         tailwind.config = {
             darkMode: 'class', /* class/media, here we use class to enable manually dark mode */
@@ -35,6 +34,7 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+
 </head>
 
 
@@ -291,137 +291,524 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-            <div class="grid grid-cols-3 gap-4 mb-4">
-                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
+    <div class="p-4 sm:ml-64 flex flex-col gap-10">
+        
+
+            <div class="flex mt-14  flex-col gap-5">
+                <h4 class="text-2xl font-semibold">Top Companies</h4>
+                <div class="flex flex-row justify-between items-center text-center">
+                    <div
+                        class="flex flex-col items-center cursor-pointer hover:shadow-2xl shadow-lg rounded-lg hover:shadow-blue-500/20  bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg " class="w-10 sm:w-20  text-gray-500 dark:text-white"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#424242" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                clip-rule="evenodd"></path>
                         </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
-                </div>
-            </div>
-            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mb-4">
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-md font-medium">Notion</p>
+                            <h4 class="text-sm lg:text-lg font-semibold">Salary range</h4>
+                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2">
+                                    </path>
+                                </svg>
+
+                                <p class="text-lg">50-250k</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
+
+
+            <div class="flex flex-col gap-5">
+                <h4 class="text-2xl font-semibold">Discover Jobs</h4>
+                <div class="flex flex-col p-4 lg:flex-row overflow-scroll gap-2 justify-evenly">
+                    <div
+                        class="flex flex-col  cursor-pointer hover:shadow-2xl shadow-lg rounded-lg hover:shadow-blue-500/20  bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg " class="w-10 sm:w-20  text-gray-500 dark:text-white"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#424242" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-md font-medium">Notion</p>
+                            <div class="flex flex-row items-center gap-2">
+                                <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                                <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">Recent</p>
+                            </div>
+                            <div class="grid  grid-cols-2  gap-2">
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z">
+                                        </path>
+                                    </svg>
+                                    <p class="text-sm">Brussels</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                    </svg>
+
+                                    <p class="text-sm">Full time</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">50-55k</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">29 min ago</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col  cursor-pointer hover:shadow-2xl shadow-lg rounded-lg hover:shadow-blue-500/20  bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg " class="w-10 sm:w-20  text-gray-500 dark:text-white"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#424242" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-md font-medium">Notion</p>
+                            <div class="flex flex-row items-center gap-2">
+                                <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                                <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">Recent</p>
+                            </div>
+                            <div class="grid  grid-cols-2  gap-2">
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z">
+                                        </path>
+                                    </svg>
+                                    <p class="text-sm">Brussels</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                    </svg>
+
+                                    <p class="text-sm">Full time</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">50-55k</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">29 min ago</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col  cursor-pointer hover:shadow-2xl shadow-lg rounded-lg hover:shadow-blue-500/20  bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg " class="w-10 sm:w-20  text-gray-500 dark:text-white"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#424242" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-md font-medium">Notion</p>
+                            <div class="flex flex-row items-center gap-2">
+                                <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                                <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">Recent</p>
+                            </div>
+                            <div class="grid  grid-cols-2  gap-2">
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z">
+                                        </path>
+                                    </svg>
+                                    <p class="text-sm">Brussels</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                    </svg>
+
+                                    <p class="text-sm">Full time</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">50-55k</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">29 min ago</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col  cursor-pointer hover:shadow-2xl shadow-lg rounded-lg hover:shadow-blue-500/20  bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg " class="w-10 sm:w-20  text-gray-500 dark:text-white"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
+                                clip-rule="evenodd"></path>
+                            <path fill="#424242" fill-rule="evenodd"
+                                d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-md font-medium">Notion</p>
+                            <div class="flex flex-row items-center gap-2">
+                                <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                                <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">Recent</p>
+                            </div>
+                            <div class="grid  grid-cols-2  gap-2">
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z">
+                                        </path>
+                                    </svg>
+                                    <p class="text-sm">Brussels</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                    </svg>
+
+                                    <p class="text-sm">Full time</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">50-55k</p>
+                                </div>
+                                <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z">
+                                        </path>
+                                    </svg>
+
+                                    <p class="text-sm">29 min ago</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
+        <div class="flex flex-col gap-10 lg:gap-2 lg:flex-row justify-between">
+            <div class=" lg:w-6/12 xl:w-4/12 bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+                <div class="flex justify-between mb-3">
+                    <div class="flex items-center">
+                        <div class="flex justify-center items-center">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white pe-1">Personal
+                                progress
+                            </h5>
+                            <svg data-popover-target="chart-info" data-popover-placement="bottom"
+                                class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer ms-1"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm0 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm1-5.034V12a1 1 0 0 1-2 0v-1.418a1 1 0 0 1 1.038-.999 1.436 1.436 0 0 0 1.488-1.441 1.501 1.501 0 1 0-3-.116.986.986 0 0 1-1.037.961 1 1 0 0 1-.96-1.037A3.5 3.5 0 1 1 11 11.466Z" />
+                            </svg>
+                            <div data-popover id="chart-info" role="tooltip"
+                                class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                                <div class="p-3 space-y-2">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth -
+                                        Incremental
+                                    </h3>
+                                    <p>Report helps navigate cumulative growth of community activities. Ideally, the
+                                        chart
+                                        should have a growing trend, as stagnating chart signifies a significant
+                                        decrease of
+                                        community activity.</p>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                    <p>For each date bucket, the all-time volume of activities is calculated. This means
+                                        that activities in period n contain all activities up to period n, plus the
+                                        activities generated by your community in period.</p>
+                                    <a href="#"
+                                        class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read
+                                        more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg></a>
+                                </div>
+                                <div data-popper-arrow></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
+
+                <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                    <div class="grid grid-cols-3 gap-3 mb-2">
+                        <dl
+                            class="bg-orange-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                            <dt
+                                class="w-8 h-8 rounded-full bg-orange-100 dark:bg-gray-500 text-orange-600 dark:text-orange-300 text-sm font-medium flex items-center justify-center mb-1">
+                                5</dt>
+                            <dd class="text-orange-600 dark:text-orange-300 text-sm font-medium">To do</dd>
+                        </dl>
+                        <dl
+                            class="bg-teal-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                            <dt
+                                class="w-8 h-8 rounded-full bg-teal-100 dark:bg-gray-500 text-teal-600 dark:text-teal-300 text-sm font-medium flex items-center justify-center mb-1">
+                                7</dt>
+                            <dd class="text-teal-600 dark:text-teal-300 text-sm font-medium">In progress</dd>
+                        </dl>
+                        <dl
+                            class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                            <dt
+                                class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">
+                                12</dt>
+                            <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Done</dd>
+                        </dl>
+                    </div>
+                    <button data-collapse-toggle="more-details" type="button"
+                        class="hover:underline text-xs text-gray-500 dark:text-gray-400 font-medium inline-flex items-center">Show
+                        more details <svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
+                                d="m1 1 4 4 4-4" />
                         </svg>
-                    </p>
+                    </button>
+                    <div id="more-details"
+                        class="border-gray-200 border-t dark:border-gray-600 pt-3 mt-3 space-y-2 hidden">
+                        <dl class="flex items-center justify-between">
+                            <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Average Job application
+                                completion</dt>
+                            <dd
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4" />
+                                </svg> 57%
+                            </dd>
+                        </dl>
+                        <dl class="flex items-center justify-between">
+                            <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Days until sprint ends:
+                            </dt>
+                            <dd
+                                class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-gray-600 dark:text-gray-300">
+                                13 days</dd>
+                        </dl>
+                        <dl class="flex items-center justify-between">
+                            <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Next meeting:</dt>
+                            <dd
+                                class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-gray-600 dark:text-gray-300">
+                                Thursday</dd>
+                        </dl>
+                    </div>
                 </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
+
+                <!-- Radial Chart -->
+                <div class="py-6" id="radial-chart"></div>
+
+                <div class=" items-center border-gray-200 border-t dark:border-gray-700 justify-center flex">
+                    <a href="#"
+                        class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+                        Progress report
+                        <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
+                                d="m1 9 4-4-4-4" />
                         </svg>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 1v16M1 9h16" />
-                        </svg>
-                    </p>
+                    </a>
                 </div>
             </div>
+
+            <div class=" lg:w-6/12 xl:w-8/12 bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+                <div class="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3">
+                    <dl>
+                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Update</dt>
+                        <dd class="leading-none text-3xl font-bold text-gray-900 dark:text-white">Salary Range</dd>
+                    </dl>
+                    <div>
+                        <span
+                            class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+                            <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4" />
+                            </svg>
+                            rate 23.5%
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 py-3">
+                    <dl>
+                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">New</dt>
+                        <dd class="leading-none text-xl font-bold text-green-500 dark:text-green-400">$150,000</dd>
+                    </dl>
+                    <dl>
+                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Previous</dt>
+                        <dd class="leading-none text-xl font-bold text-red-600 dark:text-red-500">$70,000</dd>
+                    </dl>
+                </div>
+
+                <div id="bar-chart"></div>
+                <div class="border-gray-200 border-t dark:border-gray-700 justify-center">
+                    <div class="flex justify-center items-center pt-5">
+
+                        <a href="#"
+                            class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+                            Revenue Report
+                            <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        
+    </div>
+
     </div>
 
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="./trend.js"></script>
+<script src="./Radial.js"></script>
 <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -470,6 +857,12 @@
         }
 
     });
+
+    var map = new jsVectorMap({
+        selector: "#map",
+        map: "world",
+    });
+
 </script>
 
 </html>
