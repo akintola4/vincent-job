@@ -85,8 +85,8 @@
                     </form>
 
                     <div class="flex flex-col hidden md:block ms-3">
-                        <h4 class="name text-1xl font-semibold">Notion</h4>
-                        <p class="email text-sm font-light">Notion@gmail.com</p>
+                        <h4 class="name text-1xl font-semibold">Abhishek</h4>
+                        <p class="email text-sm font-light">abhishek02@gmail.com</p>
                     </div>
                     <button id="theme-toggle" type="button"
                         class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -160,7 +160,7 @@
 
                 <li id="profile-tab" data-tabs-target="#profile">
                     <a href="#" aria-controls="profile-example" id="profile-tab-example" aria-selected="false"
-                        role="tab"
+                    role="tab"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white active hover:bg-blue-400 dark:hover:bg-gray-700 group">
                         <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-white group-hover:text-white dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -295,33 +295,263 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64 flex flex-col gap-10 mt-14  bg-gray-100 dark:bg-neutral-800">
+    <div class="p-4 sm:ml-64 flex flex-col gap-10 mt-14">
+        <section class=" gap-5 flex flex-col ">
+            <h4 class="text-2xl lg:text-6xl font-semibold">Find your <span
+                    class="text-2xl lg:text-6xl text-blue-500 font-semibold">new job </span>today</h4>
+            <p class="text-md font-light  ">Thousands of jobs in the computer, engineering and technology sectors are
+                waiting for you.</p>
 
-        <form class="max-w-md pt-10">
-            <label for="default-search"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
+            <div class="flex flex-col lg:flex-row">
+                <div
+                    class="relative flex items-center lg:w-6/12 h-12 border-2 bg-transparent  overflow-hidden dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <div class="grid place-items-center h-full w-12 text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+
+                    <input
+                        class=" h-full w-full rounded-[7px] bg-transparent px-3 py-2.5  text-sm text-blue-gray-700 border-0 outline outline-0"
+                        type="text" id="search" placeholder="Search something.." />
                 </div>
-                <input type="search" id="default-search"
-                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search" required />
-                <button type="submit"
-                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800">Search</button>
+                <div
+                    class="relative flex items-center lg:w-5/12 h-12 border-2  overflow-hidden  text-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <div class="grid place-items-center h-full w-12 text-gray-300">
+                        <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
+                        </svg>
+
+                    </div>
+
+                    <select
+                        class=" h-full w-full rounded-[7px] bg-transparent px-3 py-2.5 text-sm border-0 text-blue-gray-700 outline outline-0 ">
+                        <option value="brazil">Brazil</option>
+                        <option value="bucharest">Bucharest</option>
+                        <option value="london">London</option>
+                        <option value="washington">Washington</option>
+                    </select>
+                </div>
+
+
+                <button
+                    class="p-2 lg:w-1/12  border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Search
+                    job</button>
             </div>
-        </form>
+        </section>
 
-        <section class="grid lg:grid-cols-2 grid-cols-1 p-5  cursor-pointer justify-between gap-10">
-
-
+        <section
+            class="flex flex-row  p-5 my-10  cursor-pointer justify-between gap-10 bg-gray-100 dark:bg-neutral-800">
             <div
-                class="flex flex-col lg:flex-col bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
-                <div class="flex flex-col  xl:items-start lg:flex-row gap-5">
+                class=" hidden lg:flex lg:w-3/12  gap-5 p-5 bg-white rounded-lg flex-col dark:bg-gray-800 dark:border-gray-600 dark:text-white border border-gray-200">
+                <h4 class="text-1xl font-semibold">Filters</h4>
+                <div class="flex gap-2 flex-col dark:bg-gray-800">
+                    <h4 class="text-1xl font-semibold">Location</h4>
+                    <div class="flex gap-2 flex-col">
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Near me</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Remote
+                                job</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Exact
+                                location</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Within 15
+                                km</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Within 30
+                                km</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Within 50
+                                km</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col">
+                    <h4 class="text-1xl font-semibold">Salary</h4>
+                    <div class="grid grid-cols-2 xl:grid-cols-3">
+                        <button
+                            class="px-4 py-2 border border-gray-100 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Hourly</button>
+                        <button
+                            class="px-4 py-2 border border-gray-100 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Monthly</button>
+                        <button
+                            class="px-4 py-2 border border-gray-100 border-1 cursor-pointer hover:bg-blue-500 hover:text-white">Yearly</button>
+                    </div>
+                    <div class="flex gap-2 flex-col">
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Any</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">> 30000k</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">> 50000k</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">> 80000k</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">>
+                                100000k</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col">
+                    <h4 class="text-1xl font-semibold">Date of posting</h4>
+                    <div class="flex gap-2 flex-col">
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">All time</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Last 24
+                                hours</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Last 3
+                                days</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Last 7
+                                days</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col">
+                    <h4 class="text-1xl font-semibold">Work experience</h4>
+                    <div class="flex gap-2 flex-col">
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Any
+                                experience</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Intership</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bordered-radio-1"
+                                class="w-full ms-2 text-md font-light text-gray-900 dark:text-gray-300">Work
+                                remotely</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col">
+                    <h4 class="text-1xl font-semibold">Type of employment</h4>
+                    <div class="flex gap-2 flex-col">
+                        <div class="flex items-center me-4">
+                            <input id="inline-checkbox" type="checkbox" value=""
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="inline-checkbox"
+                                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full-time</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="inline-checkbox" type="checkbox" value=""
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="inline-checkbox"
+                                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Temporary</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="inline-checkbox" type="checkbox" value=""
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="inline-checkbox"
+                                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Part-time</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" w-12/12 lg:w-6/12 flex flex-col gap-10 overflow-scroll ">
+                <div class="flex flex-row  items-center justify-between">
+                    <h4 class="text-lg lg:text-2xl w-4/12 font-semibold"> 3177 Jobs</h4>
+                    <div
+                        class="relative flex items-center w-6/12 lg:w-5/12 h-12 border-2  bg-white overflow-hidden  text-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <div class="grid place-items-center h-full w-12 text-gray-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 7H21" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                                <path d="M6 12H18" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                                <path d="M10 17H14" stroke="black" stroke-width="1.6" stroke-linecap="round"
+                                    class="my-path"></path>
+                            </svg>
+
+                        </div>
+
+                        <select
+                            class=" h-full w-8/12 bg-white dark:bg-gray-700 dark:text-white px-3 py-2.5 text-sm border-0 text-black outline outline-0 ">
+                            <option value="brazil">Filter by</option>
+                            <option value="bucharest">Bucharest</option>
+                            <option value="london">London</option>
+                            <option value="washington">Washington</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col  xl:items-start lg:flex-row bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
                     <svg xmlns="http://www.w3.org/2000/svg "
                         class="w-20 sm:w-30 lg:w-60 xl:w-40 text-gray-500 dark:text-white" viewBox="0 0 48 48">
                         <path fill="#fff" fill-rule="evenodd"
@@ -337,8 +567,8 @@
                     <div class="flex flex-col gap-2">
                         <p class="text-md font-medium">Notion</p>
                         <div class="flex flex-row items-center gap-2">
-                            <h4 class="text-sm lg:text-sm font-semibold">Software Engineer</h4>
-                            <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">New </p>
+                            <h4 class="text-sm lg:text-lg font-semibold">Software Engineer</h4>
+                            <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">New post</p>
                         </div>
                         <div class="grid xl:grid-cols-4 grid-cols-2 xl:grid-rows-1 gap-2 xl:gap-5">
                             <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
@@ -391,98 +621,35 @@
                             it be said that they are guilty of such and such a crime. The problems occurred during the
                             launch.</p>
                     </div>
-
                 </div>
-                <div class="flex justify-between flex-row">
+
+
+            </div>
+            <div class=" hidden lg:flex lg:w-3/12 flex flex-col gap-10 ">
+                <div
+                    class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-gray-800 dark:text-white rounded-lg">
+                    <h4 class="font-semibold text-2xl text-black dark:text-white">📨 Email me for jobs</h4>
+                    <p class="text-sm text-gray-500 dark:text-white">To be like this. Let it be with labor and pain. Or
+                        let them run
+                        away with the advantage of those
+                        enemies.</p>
+                    <input type="text" class="px-4 py-2 border border-1 border-grey-100" placeholder="name@mail.com"
+                        name="" id="">
                     <button
-                        class="px-4 py-2  w-5/12  border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Edit</button>
+                        class="px-4 py-2 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Sign
+                        Up</button>
+                </div>
+                <div
+                    class="flex flex-col p-4 border border-2 w-10/12 dark:border-gray-600 gap-2 bg-white dark:bg-gray-800 dark:text-white rounded-lg">
+                    <h4 class="font-semibold text-2xl text-black dark:text-white">🚀 Get noticed faster</h4>
+                    <p class="text-sm text-gray-500 dark:text-white">He who thus abandons a hair of labor has a great
+                        desire to be
+                        driven by labor.</p>
                     <button
-                        class="px-4 py-2  w-5/12  border border-red-500 border-1 cursor-pointer hover:bg-red-500 hover:text-white">Delete</button>
+                        class="px-4 py-2 border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Upload
+                        your resume</button>
                 </div>
             </div>
-            <div
-                class="flex flex-col lg:flex-col bg-white gap-5 rounded-lg border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-600">
-                <div class="flex flex-col  xl:items-start lg:flex-row gap-5">
-                    <svg xmlns="http://www.w3.org/2000/svg "
-                        class="w-20 sm:w-30 lg:w-60 xl:w-40 text-gray-500 dark:text-white" viewBox="0 0 48 48">
-                        <path fill="#fff" fill-rule="evenodd"
-                            d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z"
-                            clip-rule="evenodd"></path>
-                        <path fill="#fff" fill-rule="evenodd"
-                            d="M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619 l23.971-1.387c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463 C13.171,14.718,12.862,15.181,12.862,16.182L12.862,16.182z"
-                            clip-rule="evenodd"></path>
-                        <path fill="#424242" fill-rule="evenodd"
-                            d="M11.553,11.099c1.232,1.001,1.694,0.925,4.008,0.77 l21.812-1.31c0.463,0,0.078-0.461-0.076-0.538l-3.622-2.619c-0.694-0.539-1.619-1.156-3.391-1.002l-21.12,1.54 c-0.77,0.076-0.924,0.461-0.617,0.77L11.553,11.099z M12.862,16.182v22.95c0,1.233,0.616,1.695,2.004,1.619l23.971-1.387 c1.388-0.076,1.543-0.925,1.543-1.927V14.641c0-1-0.385-1.54-1.234-1.463l-25.05,1.463C13.171,14.718,12.862,15.181,12.862,16.182 L12.862,16.182z M36.526,17.413c0.154,0.694,0,1.387-0.695,1.465l-1.155,0.23v16.943c-1.003,0.539-1.928,0.847-2.698,0.847 c-1.234,0-1.543-0.385-2.467-1.54l-7.555-11.86v11.475l2.391,0.539c0,0,0,1.386-1.929,1.386l-5.317,0.308 c-0.154-0.308,0-1.078,0.539-1.232l1.388-0.385V20.418l-1.927-0.154c-0.155-0.694,0.23-1.694,1.31-1.772l5.704-0.385l7.862,12.015 V19.493l-2.005-0.23c-0.154-0.848,0.462-1.464,1.233-1.54L36.526,17.413z M7.389,5.862l21.968-1.618 c2.698-0.231,3.392-0.076,5.087,1.155l7.013,4.929C42.614,11.176,43,11.407,43,12.33v27.032c0,1.694-0.617,2.696-2.775,2.849 l-25.512,1.541c-1.62,0.077-2.391-0.154-3.239-1.232l-5.164-6.7C5.385,34.587,5,33.664,5,32.585V8.556 C5,7.171,5.617,6.015,7.389,5.862z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <div class="flex flex-col gap-2">
-                        <p class="text-md font-medium">Notion</p>
-                        <div class="flex flex-row items-center gap-2">
-                            <h4 class="text-sm lg:text-sm font-semibold">Software Engineer</h4>
-                            <p class="bg-blue-100 p-2 text-sm text-blue-800 rounded-lg">New </p>
-                        </div>
-                        <div class="grid xl:grid-cols-4 grid-cols-2 xl:grid-rows-1 gap-2 xl:gap-5">
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300 ">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                                </svg>
-                                <p class="text-sm">Brussels</p>
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-
-                                <p class="text-sm">Full time</p>
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2" />
-                                </svg>
-
-                                <p class="text-sm">50-55k</p>
-                            </div>
-                            <div class="flex flex-row gap-2 items-center text-gray-500 dark:text-gray-300">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z" />
-                                </svg>
-
-                                <p class="text-sm">29 min ago</p>
-                            </div>
-                        </div>
-                        <p class="text-sm font-light">It softens the stress that occurs during the treatment period. Or
-                            they are from football. Let
-                            it be said that they are guilty of such and such a crime. The problems occurred during the
-                            launch.</p>
-                    </div>
-
-                </div>
-                <div class="flex justify-between flex-row">
-                    <button
-                        class="px-4 py-2  w-5/12  border border-blue-500 border-1 cursor-pointer bg-blue-500 text-white hover:bg-white hover:text-black">Edit</button>
-                    <button
-                        class="px-4 py-2  w-5/12  border border-red-500 border-1 cursor-pointer hover:bg-red-500 hover:text-white">Delete</button>
-                </div>
-            </div>
-
-
         </section>
 
     </div>
