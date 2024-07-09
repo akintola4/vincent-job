@@ -1,5 +1,5 @@
 
-const options = {
+var options = {
     series: [
       {
         name: "New",
